@@ -1,0 +1,17 @@
+[package]
+name = "inc_dec"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "Incrementation and decrementation in Rust."
+repository = "https://github.com/coruscateor/inc_dec"
+homepage = "https://coruscateor.com/projects/inc-dec"
+keywords = ["increment", "decrement", "integer", "floating-point", "extension"]
+categories = ["no-std"]
+
+[dependencies]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
