@@ -2,7 +2,7 @@
 ///
 /// For implementing incrementation and decrementation on Self.
 /// 
-pub trait IncDecSelf
+pub trait IncDecExt
     where Self: Sized + Copy
 {
 
@@ -21,7 +21,7 @@ pub trait IncDecSelf
 ///
 /// For implementing integer-only incrementation and decrementation on Self.
 /// 
-pub trait IntIncDecSelf
+pub trait IntIncDecExt
     where Self: Sized + Copy
 {
 
