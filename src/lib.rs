@@ -18,5 +18,8 @@ mod int_inc_dec_exts;
 
 pub use inc_dec_exts::*;
 
+#[cfg(feature = "num")]
+pub mod num;
+
 #[cfg(test)]
 mod tests;

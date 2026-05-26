@@ -11,6 +11,9 @@ categories = ["no-std"]
 
 [dependencies]
 
+[features]
+num = []
+
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
