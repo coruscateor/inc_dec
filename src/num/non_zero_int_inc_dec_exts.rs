@@ -9,7 +9,7 @@ impl IntIncDecExt for NonZeroI8
     fn opp(&mut self) -> (Self, bool)
     {
 
-        let res: Result<i8, <Self as TryInto<i8>>::Error> = NonZeroI8::try_into(*self);
+        let res: Result<i8, <Self as TryInto<i8>>::Error> = Self::try_into(*self); //NonZeroI8::try_into(*self);
 
         match res
         {
@@ -37,7 +37,7 @@ impl IntIncDecExt for NonZeroI8
 
                     }
 
-                    (*self, false)
+                    (*self, true)
                     
                 }
 
@@ -63,7 +63,7 @@ impl IntIncDecExt for NonZeroI8
     fn omm(&mut self) -> (Self, bool)
     {
 
-        let res: Result<i8, <Self as TryInto<i8>>::Error> = NonZeroI8::try_into(*self);
+        let res: Result<i8, <Self as TryInto<i8>>::Error> = Self::try_into(*self);
 
         match res
         {
@@ -87,11 +87,11 @@ impl IntIncDecExt for NonZeroI8
                     unsafe
                     {
 
-                        *self = Self::new_unchecked(-1);
+                        *self = Self::new_unchecked(i8::MAX) //-1);
 
                     }
 
-                    (*self, false)
+                    (*self, true)
                     
                 }
 
@@ -117,7 +117,7 @@ impl IntIncDecExt for NonZeroI8
     fn wpp(&mut self) -> Self
     {
         
-        let res: Result<i8, <Self as TryInto<i8>>::Error> = NonZeroI8::try_into(*self);
+        let res: Result<i8, <Self as TryInto<i8>>::Error> = Self::try_into(*self);
 
         match res
         {
@@ -171,7 +171,7 @@ impl IntIncDecExt for NonZeroI8
     fn wmm(&mut self) -> Self
     {
 
-        let res: Result<i8, <Self as TryInto<i8>>::Error> = NonZeroI8::try_into(*self);
+        let res: Result<i8, <Self as TryInto<i8>>::Error> = Self::try_into(*self);
 
         match res
         {

@@ -9,7 +9,7 @@ impl IncDecExt for NonZeroI8
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, i8, Self)
+        non_zero_pp_mut!(self, i8) //, Self)
 
         //let res: Result<i8, TryFrom<NonZero<i8>>>::Error > = (*self).try_into(); //: Result<i8, NonZero<i8>> //i8 as TryInto<i8>::Error //<i8 as TryFrom::Error>
 
@@ -69,7 +69,7 @@ impl IncDecExt for NonZeroI8
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, i8, Self)
+        non_zero_try_pp_mut!(self, i8) //, Self)
 
         /*
         let res: Result<i8, <Self as TryInto<i8>>::Error> = NonZeroI8::try_into(*self);
@@ -138,7 +138,7 @@ impl IncDecExt for NonZeroI8
     fn mm(&mut self) -> Self
     {
 
-        non_zero_signed_mm_mut!(self, i8, Self)
+        non_zero_signed_mm_mut!(self, i8) //, Self)
 
         /*
         let res: Result<i8, <Self as TryInto<i8>>::Error> = NonZeroI8::try_into(*self);
@@ -196,7 +196,7 @@ impl IncDecExt for NonZeroI8
     fn try_mm(&mut self) -> Option<Self>
     {
 
-        non_zero_signed_try_mm_mut!(self, i8, Self)
+        non_zero_signed_try_mm_mut!(self, i8) //, Self)
 
         /*
         let res: Result<i8, <Self as TryInto<i8>>::Error> = NonZeroI8::try_into(*self);
@@ -270,27 +270,27 @@ impl IncDecExt for NonZeroI16
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, i16, Self)
+        non_zero_pp_mut!(self, i16) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, i16, Self)
+        non_zero_try_pp_mut!(self, i16) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_signed_mm_mut!(self, i16, Self)
+        non_zero_signed_mm_mut!(self, i16) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-        non_zero_signed_try_mm_mut!(self, i16, Self)
+        non_zero_signed_try_mm_mut!(self, i16) //, Self)
 
     }
 
@@ -302,27 +302,27 @@ impl IncDecExt for NonZeroI32
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, i32, Self)
+        non_zero_pp_mut!(self, i32) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, i32, Self)
+        non_zero_try_pp_mut!(self, i32) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_signed_mm_mut!(self, i32, Self)
+        non_zero_signed_mm_mut!(self, i32) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-        non_zero_signed_try_mm_mut!(self, i32, Self)
+        non_zero_signed_try_mm_mut!(self, i32) //, Self)
 
     }
 
@@ -334,27 +334,27 @@ impl IncDecExt for NonZeroI64
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, i64, Self)
+        non_zero_pp_mut!(self, i64) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, i64, Self)
+        non_zero_try_pp_mut!(self, i64) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_signed_mm_mut!(self, i64, Self)
+        non_zero_signed_mm_mut!(self, i64) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-        non_zero_signed_try_mm_mut!(self, i64, Self)
+        non_zero_signed_try_mm_mut!(self, i64) //, Self)
 
     }
 
@@ -367,27 +367,27 @@ impl IncDecExt for NonZeroI128
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, i128, Self)
+        non_zero_pp_mut!(self, i128) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, i128, Self)
+        non_zero_try_pp_mut!(self, i128) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_signed_mm_mut!(self, i128, Self)
+        non_zero_signed_mm_mut!(self, i128) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-        non_zero_signed_try_mm_mut!(self, i128, Self)
+        non_zero_signed_try_mm_mut!(self, i128) //, Self)
 
     }
 
@@ -399,27 +399,27 @@ impl IncDecExt for NonZeroIsize
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, isize, Self)
+        non_zero_pp_mut!(self, isize) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, isize, Self)
+        non_zero_try_pp_mut!(self, isize) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_signed_mm_mut!(self, isize, Self)
+        non_zero_signed_mm_mut!(self, isize) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-        non_zero_signed_try_mm_mut!(self, isize, Self)
+        non_zero_signed_try_mm_mut!(self, isize) //, Self)
 
     }
 
@@ -431,27 +431,27 @@ impl IncDecExt for NonZeroU8
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, u8, Self)
+        non_zero_pp_mut!(self, u8) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, u8, Self)
+        non_zero_try_pp_mut!(self, u8) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_unsigned_mm_mut!(self, u8, Self)
+        non_zero_unsigned_mm_mut!(self, u8) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-       non_zero_unsigned_try_mm_mut!(self, u8, Self)
+       non_zero_unsigned_try_mm_mut!(self, u8) //, Self)
 
     }
 
@@ -463,27 +463,27 @@ impl IncDecExt for NonZeroU16
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, u16, Self)
+        non_zero_pp_mut!(self, u16) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, u16, Self)
+        non_zero_try_pp_mut!(self, u16) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_unsigned_mm_mut!(self, u16, Self)
+        non_zero_unsigned_mm_mut!(self, u16) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-       non_zero_unsigned_try_mm_mut!(self, u16, Self)
+       non_zero_unsigned_try_mm_mut!(self, u16) //, Self)
 
     }
 
@@ -495,27 +495,27 @@ impl IncDecExt for NonZeroU32
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, u32, Self)
+        non_zero_pp_mut!(self, u32) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, u32, Self)
+        non_zero_try_pp_mut!(self, u32) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_unsigned_mm_mut!(self, u32, Self)
+        non_zero_unsigned_mm_mut!(self, u32) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-       non_zero_unsigned_try_mm_mut!(self, u32, Self)
+       non_zero_unsigned_try_mm_mut!(self, u32) //, Self)
 
     }
 
@@ -527,27 +527,27 @@ impl IncDecExt for NonZeroU64
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, u64, Self)
+        non_zero_pp_mut!(self, u64) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, u64, Self)
+        non_zero_try_pp_mut!(self, u64) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_unsigned_mm_mut!(self, u64, Self)
+        non_zero_unsigned_mm_mut!(self, u64) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-       non_zero_unsigned_try_mm_mut!(self, u64, Self)
+       non_zero_unsigned_try_mm_mut!(self, u64) //, Self)
 
     }
 
@@ -559,27 +559,27 @@ impl IncDecExt for NonZeroU128
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, u128, Self)
+        non_zero_pp_mut!(self, u128) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, u128, Self)
+        non_zero_try_pp_mut!(self, u128) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_unsigned_mm_mut!(self, u128, Self)
+        non_zero_unsigned_mm_mut!(self, u128) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-       non_zero_unsigned_try_mm_mut!(self, u128, Self)
+       non_zero_unsigned_try_mm_mut!(self, u128) //, Self)
 
     }
 
@@ -592,27 +592,27 @@ impl IncDecExt for NonZeroUsize
     fn pp(&mut self) -> Self
     {
 
-        non_zero_pp_mut!(self, usize, Self)
+        non_zero_pp_mut!(self, usize) //, Self)
 
     }
 
     fn try_pp(&mut self) -> Option<Self>
     {
 
-        non_zero_try_pp_mut!(self, usize, Self)
+        non_zero_try_pp_mut!(self, usize) //, Self)
     }
 
     fn mm(&mut self) -> Self
     {
 
-        non_zero_unsigned_mm_mut!(self, usize, Self)
+        non_zero_unsigned_mm_mut!(self, usize) //, Self)
 
     }
 
     fn try_mm(&mut self) -> Option<Self>
     {
 
-       non_zero_unsigned_try_mm_mut!(self, usize, Self)
+       non_zero_unsigned_try_mm_mut!(self, usize) //, Self)
 
     }
 

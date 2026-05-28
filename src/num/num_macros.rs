@@ -3,12 +3,12 @@
 macro_rules! non_zero_pp_mut
 {
 
-    ($integer:ident, $integer_type:ty, $self_integer_type:ty) =>
+    ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
     {
 
         {
 
-            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = <$self_integer_type>::try_into(*$integer);
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer); //<$self_integer_type>
 
             match res
             {
@@ -67,12 +67,12 @@ macro_rules! non_zero_pp_mut
 macro_rules! non_zero_try_pp_mut
 {
 
-    ($integer:ident, $integer_type:ty, $self_integer_type:ty) =>
+    ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
     {
 
         {
 
-            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = <$self_integer_type>::try_into(*$integer);
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer); //<$self_integer_type>
 
             match res
             {
@@ -144,12 +144,12 @@ macro_rules! non_zero_try_pp_mut
 macro_rules! non_zero_signed_mm_mut
 {
 
-    ($integer:ident, $integer_type:ty, $self_integer_type:ty) =>
+    ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
     {
 
         {
 
-            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = <$self_integer_type>::try_into(*$integer);
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer); //<$self_integer_type>
 
             match res
             {
@@ -208,12 +208,12 @@ macro_rules! non_zero_signed_mm_mut
 macro_rules! non_zero_signed_try_mm_mut
 {
 
-    ($integer:ident, $integer_type:ty, $self_integer_type:ty) =>
+    ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
     {
 
         {
 
-            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = <$self_integer_type>::try_into(*$integer);
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer); //<$self_integer_type>
 
             match res
             {
@@ -285,12 +285,12 @@ macro_rules! non_zero_signed_try_mm_mut
 macro_rules! non_zero_unsigned_mm_mut
 {
 
-    ($integer:ident, $integer_type:ty, $self_integer_type:ty) =>
+    ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
     {
 
         {
 
-            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = <$self_integer_type>::try_into(*$integer);
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer); //<$self_integer_type>
 
             match res
             {
@@ -349,12 +349,12 @@ macro_rules! non_zero_unsigned_mm_mut
 macro_rules! non_zero_unsigned_try_mm_mut
 {
 
-    ($integer:ident, $integer_type:ty, $self_integer_type:ty) =>
+    ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
     {
 
         {
 
-            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = <$self_integer_type>::try_into(*$integer);
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer);
 
             match res
             {
