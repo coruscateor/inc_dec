@@ -162,9 +162,9 @@ macro_rules! non_zero_signed_mm_mut
                     if let Some(nz_decd) = Self::new(decd)
                     {
 
-                    *$integer = nz_decd;
+                        *$integer = nz_decd;
 
-                    *$integer
+                        *$integer
 
                     }
                     else
@@ -303,9 +303,9 @@ macro_rules! non_zero_unsigned_mm_mut
                     if let Some(nz_decd) = Self::new(decd)
                     {
 
-                    *$integer = nz_decd;
+                        *$integer = nz_decd;
 
-                    *$integer
+                        *$integer
 
                     }
                     else
@@ -378,6 +378,9 @@ macro_rules! non_zero_unsigned_try_mm_mut
                         else
                         {
 
+                            None
+
+                            /*
                             unsafe
                             {
 
@@ -386,6 +389,7 @@ macro_rules! non_zero_unsigned_try_mm_mut
                             }
 
                             Some(*$integer)
+                            */
                             
                         }
 

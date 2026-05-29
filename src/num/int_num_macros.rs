@@ -1,6 +1,6 @@
 
 #[macro_export]
-macro_rules! non_zero_opp_mut
+macro_rules! non_zero_signed_opp_mut
 {
 
     ($integer:ident, $integer_type:ty) =>
@@ -37,6 +37,70 @@ macro_rules! non_zero_opp_mut
                         }
 
                         (*$integer, false)
+                        
+                    }
+
+                }
+                Err(_err) =>
+                {
+
+                    unsafe
+                    {
+
+                        *$integer = Self::new_unchecked(1);
+
+                    }
+
+                    (*$integer, false)
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+#[macro_export]
+macro_rules! non_zero_unsigned_opp_mut
+{
+
+    ($integer:ident, $integer_type:ty) =>
+    {
+
+        {
+
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer);
+
+            match res
+            {
+
+                Ok(val) =>
+                {
+
+                    let maybe_incd = val.overflowing_add(1);
+
+                    if let Some(nz_incd) = Self::new(maybe_incd.0)
+                    {
+
+                        *$integer = nz_incd;
+
+                        (*$integer, maybe_incd.1)
+
+                    }
+                    else
+                    {
+
+                        unsafe
+                        {
+
+                            *$integer = Self::new_unchecked(1);
+
+                        }
+
+                        (*$integer, true)
                         
                     }
 
@@ -160,7 +224,7 @@ macro_rules! non_zero_unsigned_omm_mut
                         unsafe
                         {
 
-                            *$integer = Self::new_unchecked($integer_type::MAX) //1);
+                            *$integer = Self::new_unchecked(<$integer_type>::MAX) //1);
 
                         }
 
@@ -191,3 +255,194 @@ macro_rules! non_zero_unsigned_omm_mut
 
 }
 
+#[macro_export]
+macro_rules! non_zero_wpp_mut
+{
+
+    ($integer:ident, $integer_type:ty) =>
+    {
+
+        {
+
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer);
+
+            match res
+            {
+
+                Ok(val) =>
+                {
+
+                    let maybe_incd = val.wrapping_add(1);
+
+                    if let Some(nz_incd) = Self::new(maybe_incd)
+                    {
+
+                        *$integer = nz_incd;
+
+                        *$integer
+
+                    }
+                    else
+                    {
+
+                        unsafe
+                        {
+
+                            *$integer = Self::new_unchecked(1);
+
+                        }
+
+                        *$integer
+                        
+                    }
+
+                }
+                Err(_err) =>
+                {
+
+                    unsafe
+                    {
+
+                        *$integer = Self::new_unchecked(1);
+
+                    }
+
+                    *$integer
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+#[macro_export]
+macro_rules! non_zero_signed_wmm_mut
+{
+
+    ($integer:ident, $integer_type:ty) =>
+    {
+
+        {
+
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer);
+
+            match res
+            {
+
+                Ok(val) =>
+                {
+
+                    let maybe_decd = val.wrapping_sub(1);
+
+                    if let Some(nz_decd) = Self::new(maybe_decd)
+                    {
+
+                        *$integer = nz_decd;
+
+                        *$integer
+
+                    }
+                    else
+                    {
+
+                        unsafe
+                        {
+
+                            *$integer = Self::new_unchecked(-1); //i8::MAX)
+
+                        }
+
+                        *$integer
+                        
+                    }
+
+                }
+                Err(_err) =>
+                {
+
+                    unsafe
+                    {
+
+                        *$integer = Self::new_unchecked(-1);
+
+                    }
+
+                    *$integer
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+#[macro_export]
+macro_rules! non_zero_unsigned_wmm_mut
+{
+
+    ($integer:ident, $integer_type:ty) =>
+    {
+
+        {
+
+            let res: Result<$integer_type, <Self as TryInto<$integer_type>>::Error> = Self::try_into(*$integer);
+
+            match res
+            {
+
+                Ok(val) =>
+                {
+
+                    let maybe_decd = val.wrapping_sub(1);
+
+                    if let Some(nz_decd) = Self::new(maybe_decd)
+                    {
+
+                        *$integer = nz_decd;
+
+                        *$integer
+
+                    }
+                    else
+                    {
+
+                        unsafe
+                        {
+
+                            *$integer = Self::new_unchecked(<$integer_type>::MAX)
+
+                        }
+
+                        *$integer
+                        
+                    }
+
+                }
+                Err(_err) =>
+                {
+
+                    unsafe
+                    {
+
+                        *$integer = Self::new_unchecked(1);
+
+                    }
+
+                    *$integer
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
