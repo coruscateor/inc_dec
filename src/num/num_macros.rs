@@ -21,9 +21,9 @@ macro_rules! non_zero_pp_mut
                     if let Some(nz_incd) = Self::new(incd)
                     {
 
-                    *$integer = nz_incd;
+                        *$integer = nz_incd;
 
-                    *$integer
+                        *$integer
 
                     }
                     else
@@ -311,14 +311,22 @@ macro_rules! non_zero_unsigned_mm_mut
                     else
                     {
 
+                        panic!("Error: Value cannot be zero.")
+                        
+                        //Will it wrap?
+
+                        /*
+                        let val = 0 - 1;
+
                         unsafe
                         {
 
-                            *$integer = Self::new_unchecked(1);
+                            *$integer = Self::new_unchecked(val);
 
                         }
 
                         *$integer
+                        */
                         
                     }
 
