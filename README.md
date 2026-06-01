@@ -25,13 +25,13 @@ The pp and mm methods:
 
 ```rust
 
-    use inc_dec::IncDecSelf;
+    use inc_dec::IncDecExt;
 
-    let mut u32_val: u32 = 0;
+    let mut val: u32 = 0;
 
-    assert_eq!(1, u32_val.pp());
+    assert_eq!(1, val.pp());
 
-    assert_eq!(0, u32_val.mm());
+    assert_eq!(0, val.mm());
 
 ```
 
@@ -39,85 +39,15 @@ The try_pp and try_mm methods:
 
 ```rust
 
-    use inc_dec::IncDecSelf;
+    use inc_dec::IncDecExt;
 
-    let mut u32_val: u32 = 0;
+    let mut val: u32 = 0;
 
-    assert_eq!(Some(1), u32_val.try_pp());
+    assert_eq!(Some(1), val.try_pp());
 
-    assert_eq!(Some(0), u32_val.try_mm());
+    assert_eq!(Some(0), val.try_mm());
 
-    assert_eq!(None, u32_val.try_mm());
-
-```
-
-## Examples - Macros:
-
-The pp macro:
-
-```rust
-
-    use inc_dec::pp;
-
-    let mut int_val = 1;
-
-    pp!(int_val);
-
-    assert_eq!(2, int_val);
-
-```
-
-The ppf macro:
-
-```rust
-
-    use inc_dec::ppf;
-
-    let mut f32_val: f32 = 1.0;
-
-    ppf!(f32_val);
-
-    assert_eq!(2.0, f32_val);
-
-    let mut f64_val = 1.0;
-
-    ppf!(f64_val);
-
-    assert_eq!(2.0, f64_val);
-
-```
-
-The mm macro:
-
-```rust
-
-    use inc_dec::mm;
-
-    let mut int_val = 2;
-
-    mm!(int_val);
-
-    assert_eq!(1, int_val);
-
-```
-
-The mmf macro:
-
-```rust
-
-    use inc_dec::mmf;
-
-    let mut f32_val: f32 = 2.0;
-
-    mmf!(f32_val);
-
-    assert_eq!(1.0, f32_val);
-
-    let mut f64_val = 2.0;
-
-    mmf!(f64_val);
-
-    assert_eq!(1.0, f64_val);
+    assert_eq!(None, val.try_mm());
 
 ```
 

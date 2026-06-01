@@ -4,6 +4,18 @@
 ///
 /// Increments the provided integer by one.
 /// 
+/// ```
+///
+///    use inc_dec::pp_;
+///
+///    let mut val = 1;
+///
+///    pp_!(val);
+///
+///    assert_eq!(2, val);
+///
+///```
+/// 
 #[macro_export]
 macro_rules! pp_
 {
@@ -73,6 +85,23 @@ macro_rules! try_pp
 ///
 /// Increments the provided floating point number by one.
 /// 
+///```
+///
+///    use inc_dec::ppf_;
+///
+///    let mut val: f32 = 1.0;
+///
+///    ppf_!(val);
+///
+///    assert_eq!(2.0, val);
+///
+///    let mut val = 1.0;
+///
+///    ppf_!(val);
+///
+///    assert_eq!(2.0, val);
+///
+///```
 #[macro_export]
 macro_rules! ppf_
 {
@@ -121,6 +150,16 @@ No quick fixes available
 ///
 /// Decrements the provided integer by one.
 /// 
+/// ```
+///    use inc_dec::mm_;
+///
+///    let mut val = 2;
+///
+///    mm_!(val);
+///
+///    assert_eq!(1, val);
+/// 
+/// ```
 #[macro_export]
 macro_rules! mm_
 {
@@ -159,6 +198,24 @@ macro_rules! mm
 ///
 /// Decrements the provided floating point number by one.
 /// 
+///
+///```
+///
+///    use inc_dec::mmf_;
+///
+///    let mut val: f32 = 2.0;
+///
+///    mmf_!(val);
+///
+///    assert_eq!(1.0, val);
+///
+///    let mut val = 2.0;
+///
+///    mmf_!(val);
+///
+///    assert_eq!(1.0, val);
+///
+///```
 #[macro_export]
 macro_rules! mmf_
 {

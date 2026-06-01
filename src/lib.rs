@@ -2,6 +2,8 @@
 
 #![cfg_attr(docsrs, feature(doc_cfg))]
 
+//#![cfg_attr(feature = "no_std", no_std)]
+
 mod inc_dec_exts;
 
 pub use inc_dec_exts::*;
