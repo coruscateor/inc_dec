@@ -1,6 +1,6 @@
 
 #[macro_export]
-macro_rules! non_zero_pp_mut
+macro_rules! non_zero_pp
 {
 
     ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
@@ -64,7 +64,7 @@ macro_rules! non_zero_pp_mut
 }
 
 #[macro_export]
-macro_rules! non_zero_try_pp_mut
+macro_rules! non_zero_try_pp
 {
 
     ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
@@ -141,7 +141,7 @@ macro_rules! non_zero_try_pp_mut
 //signed
 
 #[macro_export]
-macro_rules! non_zero_signed_mm_mut
+macro_rules! non_zero_signed_mm
 {
 
     ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
@@ -205,7 +205,7 @@ macro_rules! non_zero_signed_mm_mut
 }
 
 #[macro_export]
-macro_rules! non_zero_signed_try_mm_mut
+macro_rules! non_zero_signed_try_mm
 {
 
     ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
@@ -282,7 +282,7 @@ macro_rules! non_zero_signed_try_mm_mut
 //unsigned
 
 #[macro_export]
-macro_rules! non_zero_unsigned_mm_mut
+macro_rules! non_zero_unsigned_mm
 {
 
     ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>
@@ -354,7 +354,7 @@ macro_rules! non_zero_unsigned_mm_mut
 }
 
 #[macro_export]
-macro_rules! non_zero_unsigned_try_mm_mut
+macro_rules! non_zero_unsigned_try_mm
 {
 
     ($integer:ident, $integer_type:ty) => //, $self_integer_type:ty) =>

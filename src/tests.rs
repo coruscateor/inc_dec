@@ -1,63 +1,63 @@
 
-use crate::{IncDecExt, mm, mmf, pp, ppf};
+use crate::{IncDecExt, mm_, mmf_, pp_, ppf_};
 
 //use super::*;
 
 #[test]
-fn try_pp()
+fn try_pp_()
 {
 
     let mut int_val = 1;
 
-    pp!(int_val);
+    pp_!(int_val);
 
     assert_eq!(2, int_val);
 
 }
 
 #[test]
-fn try_ppf()
+fn try_ppf_()
 {
 
     let mut f32_val: f32 = 1.0;
 
-    ppf!(f32_val);
+    ppf_!(f32_val);
 
     assert_eq!(2.0, f32_val);
 
     let mut f64_val = 1.0;
 
-    ppf!(f64_val);
+    ppf_!(f64_val);
 
     assert_eq!(2.0, f64_val);
 
 }
 
 #[test]
-fn try_mm()
+fn try_mm_()
 {
 
     let mut int_val = 2;
 
-    mm!(int_val);
+    mm_!(int_val);
 
     assert_eq!(1, int_val);
 
 }
 
 #[test]
-fn try_mmf()
+fn try_mmf_()
 {
 
     let mut f32_val: f32 = 2.0;
 
-    mmf!(f32_val);
+    mmf_!(f32_val);
 
     assert_eq!(1.0, f32_val);
 
     let mut f64_val = 2.0;
 
-    mmf!(f64_val);
+    mmf_!(f64_val);
 
     assert_eq!(1.0, f64_val);
 

@@ -1,6 +1,6 @@
 
 #[macro_export]
-macro_rules! non_zero_signed_opp_mut
+macro_rules! non_zero_signed_opp
 {
 
     ($integer:ident, $integer_type:ty) =>
@@ -64,7 +64,7 @@ macro_rules! non_zero_signed_opp_mut
 }
 
 #[macro_export]
-macro_rules! non_zero_unsigned_opp_mut
+macro_rules! non_zero_unsigned_opp
 {
 
     ($integer:ident, $integer_type:ty) =>
@@ -128,7 +128,7 @@ macro_rules! non_zero_unsigned_opp_mut
 }
 
 #[macro_export]
-macro_rules! non_zero_signed_omm_mut
+macro_rules! non_zero_signed_omm
 {
 
     ($integer:ident, $integer_type:ty) =>
@@ -192,7 +192,7 @@ macro_rules! non_zero_signed_omm_mut
 }
 
 #[macro_export]
-macro_rules! non_zero_unsigned_omm_mut
+macro_rules! non_zero_unsigned_omm
 {
 
     ($integer:ident, $integer_type:ty) =>
@@ -256,7 +256,7 @@ macro_rules! non_zero_unsigned_omm_mut
 }
 
 #[macro_export]
-macro_rules! non_zero_wpp_mut
+macro_rules! non_zero_wpp
 {
 
     ($integer:ident, $integer_type:ty) =>
@@ -320,7 +320,7 @@ macro_rules! non_zero_wpp_mut
 }
 
 #[macro_export]
-macro_rules! non_zero_signed_wmm_mut
+macro_rules! non_zero_signed_wmm
 {
 
     ($integer:ident, $integer_type:ty) =>
@@ -384,7 +384,7 @@ macro_rules! non_zero_signed_wmm_mut
 }
 
 #[macro_export]
-macro_rules! non_zero_unsigned_wmm_mut
+macro_rules! non_zero_unsigned_wmm
 {
 
     ($integer:ident, $integer_type:ty) =>

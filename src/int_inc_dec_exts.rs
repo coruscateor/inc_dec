@@ -1,4 +1,4 @@
-use crate::{IntIncDecExt, omm_mut, opp_mut, wmm_mut, wpp_mut};
+use crate::{IntIncDecExt, omm, opp, wmm, wpp};
 
 //Integers Only
 
@@ -10,7 +10,7 @@ impl IntIncDecExt for i8
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
 
         /*
         let res = self.overflowing_add(1);
@@ -25,7 +25,7 @@ impl IntIncDecExt for i8
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
         /*
         let res =self.overflowing_sub(1);
@@ -40,7 +40,7 @@ impl IntIncDecExt for i8
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
         /*
         *self = self.wrapping_add(1);
@@ -53,7 +53,7 @@ impl IntIncDecExt for i8
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
         /*
         *self = self.wrapping_sub(1);
@@ -73,28 +73,28 @@ impl IntIncDecExt for i16
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -108,28 +108,28 @@ impl IntIncDecExt for i32
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -143,28 +143,28 @@ impl IntIncDecExt for i64
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -178,28 +178,28 @@ impl IntIncDecExt for i128
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -213,28 +213,28 @@ impl IntIncDecExt for isize
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -248,28 +248,28 @@ impl IntIncDecExt for u8
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -283,28 +283,28 @@ impl IntIncDecExt for u16
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -318,28 +318,28 @@ impl IntIncDecExt for u32
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -353,28 +353,28 @@ impl IntIncDecExt for u64
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -388,28 +388,28 @@ impl IntIncDecExt for u128
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 
@@ -423,28 +423,28 @@ impl IntIncDecExt for usize
     fn opp(&mut self) -> (Self, bool)
     {
 
-        opp_mut!(self)
+        opp!(self)
         
     }
 
     fn omm(&mut self) -> (Self, bool)
     {
 
-        omm_mut!(self)
+        omm!(self)
 
     }
 
     fn wpp(&mut self) -> Self
     {
 
-        wpp_mut!(self)
+        wpp!(self)
 
     }
 
     fn wmm(&mut self) -> Self
     {
 
-        wmm_mut!(self)
+        wmm!(self)
 
     }
 

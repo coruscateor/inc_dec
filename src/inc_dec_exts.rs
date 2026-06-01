@@ -1,5 +1,5 @@
 
-use crate::{IncDecExt, checked_mm_mut, checked_pp_mut, mm_mut, mmf_mut, pp_mut, ppf_mut};
+use crate::{IncDecExt, try_mm, try_pp, mm, mmf, pp, ppf};
 
 //Integers and floating-point intergers.
 
@@ -11,7 +11,7 @@ impl IncDecExt for f32
     fn pp(&mut self) -> Self
     {
 
-        ppf_mut!(self) //;
+        ppf!(self) //;
 
         //*self
 
@@ -33,7 +33,7 @@ impl IncDecExt for f32
         if *self < (f32::MAX - 0.9)
         {
 
-            Some(ppf_mut!(self)) //;
+            Some(ppf!(self)) //;
 
             //Some(*self)
 
@@ -50,7 +50,7 @@ impl IncDecExt for f32
     fn mm(&mut self) -> Self
     {
 
-        mmf_mut!(self) //;
+        mmf!(self) //;
 
         //*self
 
@@ -62,7 +62,7 @@ impl IncDecExt for f32
         if *self > (f32::MIN + 0.9)
         {
 
-            Some(mmf_mut!(self)) //;
+            Some(mmf!(self)) //;
 
             //Some(*self)
 
@@ -86,7 +86,7 @@ impl IncDecExt for f64
     fn pp(&mut self) -> Self
     {
 
-        ppf_mut!(self) //;
+        ppf!(self) //;
 
         //*self
 
@@ -98,7 +98,7 @@ impl IncDecExt for f64
         if *self < (f64::MAX - 0.9)
         {
 
-            Some(ppf_mut!(self)) //;
+            Some(ppf!(self)) //;
 
             //Some(*self)
 
@@ -115,7 +115,7 @@ impl IncDecExt for f64
     fn mm(&mut self) -> Self
     {
 
-        mmf_mut!(self)  //;
+        mmf!(self)  //;
 
         //*self
 
@@ -127,7 +127,7 @@ impl IncDecExt for f64
         if *self > (f64::MIN + 0.9)
         {
 
-            Some(mmf_mut!(self)) //;
+            Some(mmf!(self)) //;
 
             //Some(*self)
 
@@ -151,7 +151,7 @@ impl IncDecExt for i8
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -160,7 +160,7 @@ impl IncDecExt for i8
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
         /*
         if let Some(res) = self.checked_add(1)
@@ -184,7 +184,7 @@ impl IncDecExt for i8
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -193,7 +193,7 @@ impl IncDecExt for i8
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -207,7 +207,7 @@ impl IncDecExt for i16
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -216,14 +216,14 @@ impl IncDecExt for i16
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -232,7 +232,7 @@ impl IncDecExt for i16
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -247,7 +247,7 @@ impl IncDecExt for i32
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -256,14 +256,14 @@ impl IncDecExt for i32
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -272,7 +272,7 @@ impl IncDecExt for i32
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -286,7 +286,7 @@ impl IncDecExt for i64
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -295,14 +295,14 @@ impl IncDecExt for i64
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -311,7 +311,7 @@ impl IncDecExt for i64
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -325,7 +325,7 @@ impl IncDecExt for i128
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -334,14 +334,14 @@ impl IncDecExt for i128
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -350,7 +350,7 @@ impl IncDecExt for i128
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -364,7 +364,7 @@ impl IncDecExt for isize
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -373,14 +373,14 @@ impl IncDecExt for isize
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -389,7 +389,7 @@ impl IncDecExt for isize
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -403,7 +403,7 @@ impl IncDecExt for u8
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -412,14 +412,14 @@ impl IncDecExt for u8
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -428,7 +428,7 @@ impl IncDecExt for u8
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -442,7 +442,7 @@ impl IncDecExt for u16
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -451,14 +451,14 @@ impl IncDecExt for u16
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -467,7 +467,7 @@ impl IncDecExt for u16
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -481,7 +481,7 @@ impl IncDecExt for u32
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -490,14 +490,14 @@ impl IncDecExt for u32
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -506,7 +506,7 @@ impl IncDecExt for u32
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -520,7 +520,7 @@ impl IncDecExt for u64
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -529,14 +529,14 @@ impl IncDecExt for u64
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -545,7 +545,7 @@ impl IncDecExt for u64
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -559,7 +559,7 @@ impl IncDecExt for u128
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -568,14 +568,14 @@ impl IncDecExt for u128
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -584,7 +584,7 @@ impl IncDecExt for u128
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 
@@ -598,7 +598,7 @@ impl IncDecExt for usize
     fn pp(&mut self) -> Self
     {
 
-        pp_mut!(self) //;
+        pp!(self) //;
 
         //*self
 
@@ -607,14 +607,14 @@ impl IncDecExt for usize
     fn try_pp(&mut self) -> Option<Self>
     {
         
-        checked_pp_mut!(self)
+        try_pp!(self)
 
     }
 
     fn mm(&mut self) -> Self
     {
 
-        mm_mut!(self) //;
+        mm!(self) //;
 
         //*self
 
@@ -623,7 +623,7 @@ impl IncDecExt for usize
     fn try_mm(&mut self) -> Option<Self>
     {
         
-        checked_mm_mut!(self)
+        try_mm!(self)
 
     }
 

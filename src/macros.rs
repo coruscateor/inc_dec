@@ -5,7 +5,7 @@
 /// Increments the provided integer by one.
 /// 
 #[macro_export]
-macro_rules! pp
+macro_rules! pp_
 {
 
     ($integer:ident) =>
@@ -21,7 +21,7 @@ macro_rules! pp
 /// Increments the provided integer by one and returns it.
 /// 
 #[macro_export]
-macro_rules! pp_mut
+macro_rules! pp
 {
 
     ($integer:ident) =>
@@ -45,7 +45,7 @@ macro_rules! pp_mut
 /// Overwrites the provided integer.
 /// 
 #[macro_export]
-macro_rules! checked_pp_mut
+macro_rules! try_pp
 {
 
     ($integer:ident) =>
@@ -74,7 +74,7 @@ macro_rules! checked_pp_mut
 /// Increments the provided floating point number by one.
 /// 
 #[macro_export]
-macro_rules! ppf
+macro_rules! ppf_
 {
 
     ($float:ident) =>
@@ -90,7 +90,7 @@ macro_rules! ppf
 /// Increments the provided floating point number by one and returns it.
 /// 
 #[macro_export]
-macro_rules! ppf_mut
+macro_rules! ppf
 {
 
     ($float:ident) =>
@@ -122,7 +122,7 @@ No quick fixes available
 /// Decrements the provided integer by one.
 /// 
 #[macro_export]
-macro_rules! mm
+macro_rules! mm_
 {
 
     ($integer:ident) =>
@@ -138,7 +138,7 @@ macro_rules! mm
 /// Decrements the provided integer by one and returns it.
 /// 
 #[macro_export]
-macro_rules! mm_mut
+macro_rules! mm
 {
 
     ($integer:ident) =>
@@ -160,7 +160,7 @@ macro_rules! mm_mut
 /// Decrements the provided floating point number by one.
 /// 
 #[macro_export]
-macro_rules! mmf
+macro_rules! mmf_
 {
 
     ($float:ident) =>
@@ -176,7 +176,7 @@ macro_rules! mmf
 /// Decrements the provided floating point number by one and returns it.
 /// 
 #[macro_export]
-macro_rules! mmf_mut
+macro_rules! mmf
 {
 
     ($float:ident) =>
@@ -200,7 +200,7 @@ macro_rules! mmf_mut
 /// Overwrites the provided integer.
 /// 
 #[macro_export]
-macro_rules! checked_mm_mut
+macro_rules! try_mm
 {
 
     ($integer:ident) =>
@@ -233,7 +233,7 @@ macro_rules! checked_mm_mut
 /// Overwites the provided integer with the first value and returns the tuple.
 /// 
 #[macro_export]
-macro_rules! opp_mut
+macro_rules! opp
 {
 
     ($integer:ident) =>
@@ -259,7 +259,7 @@ macro_rules! opp_mut
 /// Overwites the provided integer with the first value and returns the tuple.
 /// 
 #[macro_export]
-macro_rules! omm_mut
+macro_rules! omm
 {
 
     ($integer:ident) =>
@@ -285,7 +285,7 @@ macro_rules! omm_mut
 /// Overwites the provided integer and returns it.
 /// 
 #[macro_export]
-macro_rules! wpp_mut
+macro_rules! wpp
 {
 
     ($integer:ident) =>
@@ -309,7 +309,7 @@ macro_rules! wpp_mut
 /// Overwites the provided integer and returns it.
 /// 
 #[macro_export]
-macro_rules! wmm_mut
+macro_rules! wmm
 {
 
     ($integer:ident) =>
