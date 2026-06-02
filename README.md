@@ -1,6 +1,6 @@
 <div align="center">
 
-# Inc Dec
+# IncDec
 
 [![Crates.io](https://img.shields.io/crates/v/inc_dec)](https://crates.io/crates/inc_dec)
 [![License](https://img.shields.io/badge/license-MIT%2FApache-blue)](#license)
@@ -19,7 +19,15 @@ Incrementation and decrementation in Rust.
 
 </div>
 
-## Examples - Extension Traits:
+<br/>
+
+<br/>
+
+IncDec provides macros and extension traits which make doing incrementation and decrementation of numeric values a bit easier.
+
+<br/>
+
+## Examples:
 
 The pp and mm methods:
 
@@ -53,31 +61,35 @@ The try_pp and try_mm methods:
 
 </br>
 
-Aside from regular incrementation and decrementation, the following core library integer methods are used (With associated trait method names) in the integer implementations of the IncDecSelf and IntIncDecSelf traits:
+The below tables indicate which trait implementation methods use which core integer methods (where applicable):
 
-| Method | IncDecSelf Method |
-| ------ | ----------- |
-| checked_add | try_pp |
-| checked_sub | try_mm |
+| IncDecExt Method | Method Used |
+| ---------------- | ----------- |
+| try_pp           | checked_add |
+| try_mm           | checked_sub |
 
-| Method | IntIncDecSelf Method |
-| ------ | ----------- |
-| overflowing_add | opp |
-| overflowing_sub | omm |
-| wrapping_add | wpp |
-| wrapping_sub | wmm |
+| IntIncDecExt Method | Method          |
+| ------------------- | --------------- |
+| opp                 | overflowing_add |
+| omm                 | overflowing_sub |
+| wpp                 | wrapping_add    |
+| wmm                 | wrapping_sub    |
 
-## No-Std
-
-You don't need it.
+</br>
 
 ## Todo:
 
-- Add more documentation
-- Add more code examples
-- Add more tests
-- Clean-up the code
-- Add support for non-zero integers (core::num).
+- Add more documentation.
+- Add more code examples.
+- Add more tests.
+- Clean-up the code.
+- Support saturating incrementation and decrementation.
+
+## Maybe
+
+- Add support for numeric types in other crates.
+
+</br>
 
 ## Coding Style
 
