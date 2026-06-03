@@ -4,7 +4,7 @@ use crate::{IncDecExt, mm_, mmf_, pp_, ppf_};
 //use super::*;
 
 #[test]
-fn try_pp_()
+fn test_pp_()
 {
 
     let mut int_val = 1;
@@ -16,7 +16,7 @@ fn try_pp_()
 }
 
 #[test]
-fn try_ppf_()
+fn test_ppf_()
 {
 
     let mut f32_val: f32 = 1.0;
@@ -34,7 +34,7 @@ fn try_ppf_()
 }
 
 #[test]
-fn try_mm_()
+fn test_mm_()
 {
 
     let mut int_val = 2;
@@ -46,7 +46,7 @@ fn try_mm_()
 }
 
 #[test]
-fn try_mmf_()
+fn test_mmf_()
 {
 
     let mut f32_val: f32 = 2.0;

@@ -27,7 +27,7 @@ IncDec provides macros and extension traits which make doing incrementation and 
 
 <br/>
 
-## Examples:
+## Examples
 
 The pp and mm extension methods:
 
@@ -109,7 +109,15 @@ The below tables indicate which trait implementation methods use which core inte
 
 </br>
 
-## Todo:
+## Features
+
+| Feature     | Description                                |
+| ----------- | -------------------------------------------|
+| num         | Enable core::num NonZero extension methods. |
+
+</br>
+
+## Todo
 
 - Add more documentation.
 - Add more code examples.
@@ -117,7 +125,7 @@ The below tables indicate which trait implementation methods use which core inte
 - Clean-up the code.
 - Support saturating incrementation and decrementation.
 
-## Maybe:
+## Maybe
 
 - Add support for numeric types in other crates.
 
