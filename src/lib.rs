@@ -24,4 +24,7 @@ pub use inc_dec_exts::*;
 mod num;
 
 #[cfg(test)]
-mod tests;
+mod inc_dec_ext_tests;
+
+#[cfg(test)]
+mod int_inc_dec_ext_tests;

@@ -29,7 +29,7 @@ IncDec provides macros and extension traits which make doing incrementation and 
 
 ## Examples:
 
-The pp and mm methods:
+The pp and mm extension methods:
 
 ```rust
 
@@ -43,7 +43,7 @@ The pp and mm methods:
 
 ```
 
-The try_pp and try_mm methods:
+The try_pp and try_mm extension methods:
 
 ```rust
 
@@ -56,6 +56,38 @@ The try_pp and try_mm methods:
     assert_eq!(Some(0), val.try_mm());
 
     assert_eq!(None, val.try_mm());
+
+```
+
+The opp and omm extension methods:
+
+```rust
+
+    use inc_dec::IntIncDecExt;
+
+    let mut val: u32 = 0;
+
+    assert_eq!((1, false), val.opp());
+
+    assert_eq!((0, false), val.omm());
+
+    assert_eq!((u32::MAX, true), val.omm());
+
+```
+
+The wpp and wmm extension methods:
+
+```rust
+
+    use inc_dec::IntIncDecExt;
+
+    let mut val: u32 = 0;
+
+    assert_eq!(1, val.wpp());
+
+    assert_eq!(0, val.wmm());
+
+    assert_eq!(u32::MAX, val.wmm());
 
 ```
 
@@ -85,7 +117,7 @@ The below tables indicate which trait implementation methods use which core inte
 - Clean-up the code.
 - Support saturating incrementation and decrementation.
 
-## Maybe
+## Maybe:
 
 - Add support for numeric types in other crates.
 
