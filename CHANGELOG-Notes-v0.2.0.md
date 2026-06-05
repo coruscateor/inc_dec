@@ -138,7 +138,7 @@ Date:   Thu May 28 18:29:10 2026 +1200
     
     - Fiddled with wrapping bounds.
 
-commit 92d66e7986a56045cb4bb049bbeea3d94083922e
+commit 92d66e7986a56045cb4bb049bbeea3d94083922e -
 Author: Paul Saunders <coruscateor@users.noreply.github.com>
 Date:   Wed May 27 20:29:41 2026 +1200
 
@@ -168,7 +168,7 @@ Date:   Wed May 27 20:29:41 2026 +1200
     
     - Added an IntIncDecExt implementation for the core::num::NonZeroI8 type.
 
-commit c2ab34adbea3dfa7ab601bfb7c73ba0d57e90295
+commit c2ab34adbea3dfa7ab601bfb7c73ba0d57e90295 -
 Author: Paul Saunders <coruscateor@users.noreply.github.com>
 Date:   Tue May 26 19:24:49 2026 +1200
 
@@ -178,7 +178,7 @@ Date:   Tue May 26 19:24:49 2026 +1200
     
     - Added an IncDecExt implementation for the core::num::NonZeroI8 type.
 
-commit 02695ae2e14ea7a782c6de42877b0ef60ed02219
+commit 02695ae2e14ea7a782c6de42877b0ef60ed02219 -
 Author: Paul Saunders <coruscateor@users.noreply.github.com>
 Date:   Tue May 26 15:49:20 2026 +1200
 
@@ -190,13 +190,13 @@ Date:   Tue May 26 15:49:20 2026 +1200
     
     - Removed the tests mod block but left its contents in the tests module file.
 
-commit d8cb9af4ec303d93fe72e35bd2aec64c15e04fb7
+commit d8cb9af4ec303d93fe72e35bd2aec64c15e04fb7 -
 Author: Paul Saunders <coruscateor@users.noreply.github.com>
 Date:   Tue May 26 14:56:09 2026 +1200
 
     - Renamed the inc_dec module to inc_dec_exts.
 
-commit 7f33752103707993fbd07ce3937f80152f31e381
+commit 7f33752103707993fbd07ce3937f80152f31e381 -
 Author: Paul Saunders <coruscateor@users.noreply.github.com>
 Date:   Tue May 26 14:30:38 2026 +1200
 
@@ -208,13 +208,13 @@ Date:   Tue May 26 14:30:38 2026 +1200
     
     - Replaced “doc_auto_cfg” with “doc_cfg” in the lib file.
 
-commit a4429f029ecb24a619ccae65034a5e21d67049ab
+commit a4429f029ecb24a619ccae65034a5e21d67049ab -
 Author: Paul Saunders <coruscateor@users.noreply.github.com>
 Date:   Fri Mar 21 15:12:20 2025 +1300
 
     Added the GitHub funding file and updated the gitignore file.
 
-commit 85366759fcd53532075de3bc0dfecf49edff4045
+commit 85366759fcd53532075de3bc0dfecf49edff4045 --
 Author: Paul Saunders <coruscateor@users.noreply.github.com>
 Date:   Fri Mar 21 15:08:32 2025 +1300
 

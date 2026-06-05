@@ -25,9 +25,9 @@ commit 5412d5e3ed8c48b3e60bc3e87f46a8e036ede84f
 
 -- The non_zero_unsigned_mm_mut macro now panics if the provided value gets decremented to zero.
 
-- The non_zero_unsigned_mm macro now panics if the provided value gets decremented to zero.
+-- The non_zero_unsigned_mm macro now panics if the provided value gets decremented to zero.
 
-Renamed
+Renamed - Added in this version.
 
 - Added the non_zero_i8_test and non_zero_u8_test test functions to the num::int_num_tests module.
 
@@ -71,6 +71,48 @@ commit 6db695f26d86fdf1304b6b73422e8267cbe928af
 
 Renamed
 
+commit 92d66e7986a56045cb4bb049bbeea3d94083922e
+
+-- Added the non_zero_pp_mut, non_zero_try_pp_mut, non_zero_signed_mm_mut, non_zero_signed_try_mm_mut, non_zero_unsigned_mm_mut and non_zero_unsigned_try_mm_mut macros.
+
+- Added the non_zero_pp, non_zero_try_pp, non_zero_signed_mm, non_zero_signed_try_mm, non_zero_unsigned_mm and non_zero_unsigned_try_mm macros.
+
+Renamed
+
+- Added an IncDecExt implementation for the core::num::NonZeroI16 type.
+
+- Added an IncDecExt implementation for the core::num::NonZeroI32 type.
+
+- Added an IncDecExt implementation for the core::num::NonZeroI64 type.
+
+- Added an IncDecExt implementation for the core::num::NonZeroI128 type.
+
+- Added an IncDecExt implementation for the core::num::NonZeroIsize type.
+
+- Added an IncDecExt implementation for the core::num::NonZeroU8 type.
+
+- Added an IncDecExt implementation for the core::num::NonZeroU16 type.
+
+- Added an IncDecExt implementation for the core::num::NonZeroU64 type.
+
+- Added an IncDecExt implementation for the core::num::NonZeroU128 type.
+
+- Added an IncDecExt implementation for the core::num::NonZeroUsize type.
+
+- Added an IntIncDecExt implementation for the core::num::NonZeroI8 type.
+
+commit c2ab34adbea3dfa7ab601bfb7c73ba0d57e90295
+
+- Added the num feature.
+
+- Added the num module and made it depend on the num feature.
+
+- Added an IncDecExt implementation for the core::num::NonZeroI8 type.
+
+commit a4429f029ecb24a619ccae65034a5e21d67049ab
+
+- Added the GitHub funding file and updated the gitignore file.
+
 
 
 ### Changed
@@ -91,7 +133,7 @@ commit d80858195d6786e3ed38ffb946862ffe7e94dcda
 
 -- Updated the readme.
 
--- Renamed the test module to inc_dec_ext_tests.
+- Renamed the test module to inc_dec_ext_tests.
 
 Added - Renamed
 
@@ -165,6 +207,36 @@ commit 6db695f26d86fdf1304b6b73422e8267cbe928af
     
 -- Fiddled with wrapping bounds.
 
+commit 92d66e7986a56045cb4bb049bbeea3d94083922e
+
+-- The IncDecExt implementation of the core::num::NonZeroI8 type now uses the newly added macros in its method definitions.
+
+commit 02695ae2e14ea7a782c6de42877b0ef60ed02219
+
+- Renamed the IncDecSelf trait to IncDecExt and updated the relevant parts of the project accordingly.
+
+- Renamed the IntIncDecSelf trait to IntIncDecExt and updated the relevant parts of the project accordingly.
+
+-- Moved the IntIncDecExt related functionality from the inc_dec_exts module to the int_inc_dec_exts module.
+
+- Moved the IntIncDecExt related functionality from the inc_dec_exts module to the newly added int_inc_dec_exts module.
+
+Moved
+
+commit d8cb9af4ec303d93fe72e35bd2aec64c15e04fb7
+
+- Renamed the inc_dec module to inc_dec_exts.
+
+commit 7f33752103707993fbd07ce3937f80152f31e381
+
+- Moved the macros from the inc_dec module into the new macros module.
+
+- Moved the tests from the inc_dec module into the new tests module.
+
+- Moved the traits from the inc_dec module into the new traits module.
+
+- Replaced “doc_auto_cfg” with “doc_cfg” in the lib file.
+
 
 
 ### Deprecated
@@ -180,6 +252,10 @@ commit 1c4fa54a0bfffed3ef1fcc58a53abcb6789c8fd9
 commit 6a09265db734b4dd84924fac5223f568a5210d52
 
 - Removed the "floating-point" keyword from the package keywords field.
+
+commit 02695ae2e14ea7a782c6de42877b0ef60ed02219
+
+-- Renamed the inc_dec module to inc_dec_exts.
 
 
 
